@@ -23,6 +23,7 @@ public class AbstractTest {
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.get("https://gb.ru/login");
     }
 
     @AfterEach

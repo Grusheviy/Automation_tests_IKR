@@ -9,8 +9,6 @@ public class UITest extends AbstractTest{
 
     @Test
     void testGBNotEmailLogin() {
-        driver.get("https://gb.ru/login");
-
         LoginPage loginPage = new LoginPage(driver);
         loginPage.enterCredentials("login", "password");
         loginPage.clickLoginButton();
@@ -22,7 +20,6 @@ public class UITest extends AbstractTest{
 
     @Test
     void testGBWithoutPassword() {
-        driver.get("https://gb.ru/login");
         LoginPage loginPage = new LoginPage(driver);
         loginPage.enterEmail("login@login.ru");
         loginPage.clickLoginButton();
